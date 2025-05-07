@@ -28,7 +28,7 @@ function App() {
     try {
       const res = await axios.get('https://api.thecatapi.com/v1/images/search');
       setCatUrl(res.data[0]?.url || '');
-    } catch (e) {
+    } catch {
       setCatUrl('');
     }
   }, []);
